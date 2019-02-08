@@ -23,5 +23,15 @@ namespace UniversityClinicHospital
             Console.WriteLine("Paid Status: " + Paid);
 
         }
+
+        public void DrawBlood(Patient patient)
+        {
+            patient.BloodDrawn();
+        }
+
+        public void Care(Patient patient)
+        {
+            patient.CaredFor();
+        }
     }
 }

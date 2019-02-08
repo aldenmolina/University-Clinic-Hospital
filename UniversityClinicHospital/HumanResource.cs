@@ -4,7 +4,9 @@ using System.Text;
 
 namespace UniversityClinicHospital
 {
-    class HumanResource
+    public class HumanResource
     {
+        public static List<Employee> employees { get; private set; }
+
     }
 }
