@@ -10,13 +10,22 @@ namespace UniversityClinicHospital
 
         public Doctor()
         {
+            Name = "Billy Bob";
+            EmployeeNumber = 110011;
             Position = "Doctor";
             Specialty = "Butt Doctor";
         }
 
         public override void PaySalary()
         {
+            if (Paid == false)
+            {
             PayDoctor();
+            }
+            else
+            {
+                Console.WriteLine("Already paid salary for the session.");
+            }
         }
 
         public override void Status()

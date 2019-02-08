@@ -6,8 +6,8 @@ namespace UniversityClinicHospital
 {
     public abstract class Employee
     {
-        public string Name { get; private set; }
-        public string EmployeeNumber { get; private set; }
+        public string Name { get; set; }
+        public int EmployeeNumber { get; set; }
         public string Position { get; set; }
         public string Salary { get; private set; }
         public bool Paid { get; private set; }

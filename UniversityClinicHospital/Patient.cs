@@ -6,6 +6,7 @@ namespace UniversityClinicHospital
 {
     public class Patient
     {
+        public string Name { get; set; }
         public int HealthLevel { get; private set; }
         public int BloodLevel { get; private set; }
 

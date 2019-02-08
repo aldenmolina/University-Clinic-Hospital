@@ -10,12 +10,21 @@ namespace UniversityClinicHospital
 
         public Janitor()
         {
+            Name = "Tom Hanks";
+            EmployeeNumber = 44044;
             Sweeping = false;
         }
 
         public override void PaySalary()
         {
-            PayJanitor();
+            if (Paid == false)
+            {
+                PayJanitor();
+            }
+            else
+            {
+                Console.WriteLine("Already paid salary for the session.");
+            }
         }
 
         public override void Status()

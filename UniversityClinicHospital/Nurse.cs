@@ -8,9 +8,25 @@ namespace UniversityClinicHospital
     {
         public int NumberOfPatients { get; private set; }
 
+        public Nurse()
+        {
+            Random random = new Random();
+
+            Name = "George Michael";
+            EmployeeNumber = 22022;
+            NumberOfPatients = random.Next(5, 20);
+        }
+
         public override void PaySalary()
         {
-            PayNurse();
+            if (Paid == false)
+            {
+                PayNurse();
+            }
+            else
+            {
+                Console.WriteLine("Already paid salary for the session.");
+            }
         }
 
         public override void Status()

@@ -10,12 +10,21 @@ namespace UniversityClinicHospital
 
         public Receptionist()
         {
+            Name = "Marylin Monroe";
+            EmployeeNumber = 33033;
             OnPhone = false;
         }
 
         public override void PaySalary()
         {
-            PayReceptionist();
+            if (Paid == false)
+            {
+                PayReceptionist();
+            }
+            else
+            {
+                Console.WriteLine("Already paid salary for the session.");
+            }
         }
 
         public override void Status()
