@@ -47,5 +47,10 @@ namespace UniversityClinicHospital
             Console.WriteLine("Press ANY key to go back to Main Menu.");
             Console.ReadKey();
         }
+
+        public void EmployeeActions()
+        {
+            Console.WriteLine("")
+        }
     }
 }

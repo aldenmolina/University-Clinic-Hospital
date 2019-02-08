@@ -16,16 +16,15 @@ namespace UniversityClinicHospital
             Specialty = "Butt Doctor";
         }
 
-        public override void PaySalary()
+        public override void PayEmployee()
         {
             if (Paid == false)
             {
-            PayDoctor();
+            Console.WriteLine("Doctor has been paid $40,000.00 for salary.");
+            Salary += 90000;
+                Paid = true;
             }
-            else
-            {
-                Console.WriteLine("Already paid salary for the session.");
-            }
+            else { Console.WriteLine("Employee already paid for this session."); }
         }
 
         public override void Status()

@@ -15,16 +15,15 @@ namespace UniversityClinicHospital
             Sweeping = false;
         }
 
-        public override void PaySalary()
+        public override void PayEmployee()
         {
             if (Paid == false)
             {
-                PayJanitor();
+            Console.WriteLine("Janitor has been paid $40,000.00 for salary.");
+            Salary += 40000;
+            Paid = true;
             }
-            else
-            {
-                Console.WriteLine("Already paid salary for the session.");
-            }
+            else { Console.WriteLine("Employee already paid for this session."); }
         }
 
         public override void Status()
