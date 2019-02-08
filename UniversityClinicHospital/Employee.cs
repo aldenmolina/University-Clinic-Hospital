@@ -8,6 +8,7 @@ namespace UniversityClinicHospital
     {
         public string Name { get; private set; }
         public string EmployeeNumber { get; private set; }
+        public string Position { get; set; }
         public string Salary { get; private set; }
         public bool Paid { get; private set; }
 
@@ -16,6 +17,8 @@ namespace UniversityClinicHospital
             Paid = false;
         }
         public abstract void PaySalary();
+
+        public abstract void Status();
 
         public void PayDoctor()
         {
@@ -45,7 +48,7 @@ namespace UniversityClinicHospital
             Paid = true;
         }
 
-
+        
 
     }
 }

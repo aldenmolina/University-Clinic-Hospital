@@ -14,5 +14,6 @@ namespace UniversityClinicHospital
             HealthLevel = 10;
             BloodLevel = 20;
         }
+
     }
 }
