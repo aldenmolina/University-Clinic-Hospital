@@ -12,8 +12,17 @@ namespace UniversityClinicHospital
 
         public Patient()
         {
+            Name = "Bojangles";
             HealthLevel = 10;
             BloodLevel = 20;
+        }
+        public void PatientStatus()
+        {
+            Console.Clear();
+            Console.WriteLine("Name: " + Name);
+            Console.WriteLine("Health Level: " + HealthLevel);
+            Console.WriteLine("Blood Level: " + BloodLevel);
+            Console.ReadKey();
         }
 
         public void BloodDrawn()
@@ -43,7 +52,7 @@ namespace UniversityClinicHospital
             }
             if (BloodLevel > 100)
             {
-                BloodLevel = 100);
+                BloodLevel = 100;
             }
             if (HealthLevel < 0)
             {

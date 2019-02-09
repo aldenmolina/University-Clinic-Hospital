@@ -37,15 +37,46 @@ namespace UniversityClinicHospital
             Console.WriteLine("Paid Status: " + Paid);
 
         }
+        public void DoctorActions(Patient patient)
+        {
+            Console.Clear();
+            Console.WriteLine("What to do with doctor?");
+            Console.WriteLine("1. Draw Blood.");
+            Console.WriteLine("2. Treat.");
+            Console.WriteLine("3. Go back to Main Menu.");
+            string doctorAction = Console.ReadLine();
+            switch (doctorAction)
+            {
+                case "1":
+                    DrawBlood(patient);
+                    break;
+                case "2":
+                    Treat(patient);
+                    break;
+                case "3":
+                    break;
+                default:
+                    Console.WriteLine("Please choose a valid selection.");
+                    Console.ReadKey();
+                    break;
+            }
+        }
 
         public void DrawBlood(Patient patient)
         {
             patient.BloodDrawn();
+            Console.WriteLine("You drew blood!");
+            Console.WriteLine("Patient blood level is now " + patient.BloodLevel);
+            Console.ReadKey();
+           
         }
 
         public void Treat(Patient patient)
         {
             patient.Treated();
+            Console.WriteLine("You treated the patient!");
+            Console.WriteLine("Patient health level is now " + patient.HealthLevel);
+            Console.ReadKey();
         }
     }
 }

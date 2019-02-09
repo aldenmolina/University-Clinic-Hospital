@@ -15,6 +15,19 @@ namespace UniversityClinicHospital
             OnPhone = false;
         }
 
+        public void Phone()
+        {
+            if (OnPhone == false)
+            {
+                OnPhone = true;
+                Console.WriteLine("Receptionist is now on the phone");
+                Console.ReadKey();
+            } else {
+                OnPhone = false;
+                Console.WriteLine("Receptionist is now off the phone");
+                Console.ReadKey();
+            }
+        }
         public override void PayEmployee()
         {
             if (Paid == false)

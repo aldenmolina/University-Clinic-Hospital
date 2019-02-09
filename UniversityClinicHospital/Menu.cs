@@ -8,31 +8,37 @@ namespace UniversityClinicHospital
     {
         public void MainMenu(HumanResource hr)
         {
+            Console.Clear();
             Console.WriteLine("======MAIN MENU======");
             Console.WriteLine("1. List of Employees.");
-            Console.WriteLine("2. Employee Status.");
-            Console.WriteLine("3. Employee Actions.");
-            Console.WriteLine("4. Pay Employees.");
+            Console.WriteLine("2. Employee Actions.");
+            Console.WriteLine("3. Pay Employees.");
+            Console.WriteLine("4. Check patient Status");
 
             string input = Console.ReadLine();
             switch (input)
             {
                 case "1":
-                    hr.ListEmployees();
-                    MainMenu(hr);
-                    break;
-                case "2":
                     hr.ListEmployeeStatus();
                     MainMenu(hr);
                     break;
+                case "2":
+                    hr.EmployeeActions();
+                    MainMenu(hr);
+                    break;
                 case "3":
-                    //add list of employee actions.
+                    hr.EmployeePayments();
                     MainMenu(hr);
                     break;
                 case "4":
-                    //add payment method to pay employees
+                    hr.Patient();
                     MainMenu(hr);
                     break;
+                default:
+                    Console.WriteLine("Please choose a valid selection.");
+                    Console.ReadKey();
+                    break;
+
             }
         }
         

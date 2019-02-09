@@ -6,7 +6,10 @@ namespace UniversityClinicHospital
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            HumanResource hr = new HumanResource();
+            Menu menu = new Menu();
+
+            menu.MainMenu(hr);
         }
     }
 }

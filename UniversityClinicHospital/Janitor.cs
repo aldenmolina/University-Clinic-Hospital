@@ -19,11 +19,25 @@ namespace UniversityClinicHospital
         {
             if (Paid == false)
             {
-            Console.WriteLine("Janitor has been paid $40,000.00 for salary.");
-            Salary += 40000;
-            Paid = true;
+                Console.WriteLine("Janitor has been paid $40,000.00 for salary.");
+                Salary += 40000;
+                Paid = true;
             }
             else { Console.WriteLine("Employee already paid for this session."); }
+        }
+
+        public void Sweep()
+        {
+            if (Sweeping == false)
+            {
+                Sweeping = true; Console.WriteLine("Janitor is now sweeping");
+                Console.ReadKey();
+            }
+            else
+            {
+                Sweeping = false; Console.WriteLine("Janitor is done sweeping");
+                Console.ReadKey();
+            }
         }
 
         public override void Status()
