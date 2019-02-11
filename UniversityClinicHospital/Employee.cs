@@ -9,12 +9,13 @@ namespace UniversityClinicHospital
         public string Name { get; set; }
         public int EmployeeNumber { get; set; }
         public string Position { get; set; }
-        public string Salary { get; set; }
+        public int Salary { get; set; }
         public bool Paid { get; set; }
 
         public Employee()
         {
             Paid = false;
+            Salary = 0;
         }
 
         public abstract void Status();
